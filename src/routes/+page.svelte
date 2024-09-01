@@ -5,14 +5,24 @@
 	import { initializeApp } from 'firebase/app';
 	import { getDatabase, ref, push, set } from 'firebase/database';
 
+	import {
+		PUBLIC_FIREBASE_API_KEY,
+		PUBLIC_FIREBASE_AUTH_DOMAIN,
+		PUBLIC_FIREBASE_DATABASE_URL,
+		PUBLIC_FIREBASE_PROJECT_ID,
+		PUBLIC_FIREBASE_STORAGE_BUCKET,
+		PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+		PUBLIC_FIREBASE_APP_ID
+	} from '$env/static/public';
+
 	const firebaseConfig = {
-		apiKey: 'FIREBASE_API_KEY<==',
-		authDomain: 'the-gratitude-machine.firebaseapp.com',
-		databaseURL: 'https://the-gratitude-machine-default-rtdb.europe-west1.firebasedatabase.app',
-		projectId: 'the-gratitude-machine',
-		storageBucket: 'the-gratitude-machine.appspot.com',
-		messagingSenderId: '970529816258',
-		appId: '1:970529816258:web:3289ef8df32deeaa17055b'
+		apiKey: PUBLIC_FIREBASE_API_KEY,
+		authDomain: PUBLIC_FIREBASE_AUTH_DOMAIN,
+		databaseURL: PUBLIC_FIREBASE_DATABASE_URL,
+		projectId: PUBLIC_FIREBASE_PROJECT_ID,
+		storageBucket: PUBLIC_FIREBASE_STORAGE_BUCKET,
+		messagingSenderId: PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+		appId: PUBLIC_FIREBASE_APP_ID
 	};
 
 	const app = initializeApp(firebaseConfig);
